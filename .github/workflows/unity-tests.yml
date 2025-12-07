@@ -80,7 +80,7 @@ jobs:
 
       - name: Run tests
         id: tests
-        uses: js-9/unity-test-runner@add-incremental-build-cache-support-and-parallel-linking-test
+        uses: js-9/unity-test-runner@add-incremental-build-cache-support-and-parallel-linking
         env:
           UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
           UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}

@@ -75,9 +75,6 @@ jobs:
         run: rm -r -f .github/unityci
         if: matrix.testMode.name == 'Standalone'
 
-      - uses: jlumbroso/free-disk-space@v1.3.1
-        if: matrix.testMode.name == 'Standalone'
-
       - name: Run tests
         id: tests
         uses: js-9/unity-test-runner@add-incremental-build-cache-support-and-parallel-linking-test

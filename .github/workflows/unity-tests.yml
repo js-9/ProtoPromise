@@ -6,10 +6,6 @@ jobs:
   unity-tests:
     name: ${{ matrix.unity.major }}-${{ matrix.configuration.name }}-${{ matrix.objectPooling.name }}-${{ matrix.testMode.name }}
     runs-on: ubuntu-latest
-    env:
-      UNITY_EMAIL: '${{ secrets.UNITY_EMAIL }}'
-      UNITY_PASSWORD: '${{ secrets.UNITY_PASSWORD }}'
-      UNITY_LICENSE: '${{ secrets.UNITY_LICENSE_2018_4_36F1_UBUNTU }}'
     strategy:
       fail-fast: false
       matrix:
@@ -85,6 +81,10 @@ jobs:
       - name: Run tests
         id: tests
         uses: js-9/unity-test-runner@add-incremental-build-cache-support-and-parallel-linking-test
+        env:
+          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE_2018_4_36F1_UBUNTU }}
         with:
           projectPath: ProtoPromise_Unity
           testMode: ${{ matrix.testMode.value }}

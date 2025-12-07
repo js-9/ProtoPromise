@@ -83,7 +83,7 @@ jobs:
         uses: js-9/unity-test-runner@add-incremental-build-cache-support-and-parallel-linking-test
         env:
           UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
-          UNITY_PASSWORD: '${{ secrets.UNITY_PASSWORD }}'
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE_2018_4_36F1_UBUNTU }}
         with:
           projectPath: ProtoPromise_Unity

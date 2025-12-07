@@ -82,9 +82,12 @@ jobs:
         id: tests
         uses: js-9/unity-test-runner@add-incremental-build-cache-support-and-parallel-linking-test
         env:
-          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
-          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
-          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE_2018_4_36F1_UBUNTU }}
+          # UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+          # UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+          # UNITY_LICENSE: ${{ secrets.UNITY_LICENSE_2018_4_36F1_UBUNTU }}
+          UNITY_EMAIL: a
+          UNITY_PASSWORD: b
+          UNITY_LICENSE: c
         with:
           projectPath: ProtoPromise_Unity
           testMode: ${{ matrix.testMode.value }}

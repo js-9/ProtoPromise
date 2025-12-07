@@ -6,7 +6,6 @@ jobs:
   unity-tests:
     name: ${{ matrix.unity.major }}-${{ matrix.configuration.name }}-${{ matrix.objectPooling.name }}-${{ matrix.testMode.name }}
     runs-on: ubuntu-latest
-    
     strategy:
       fail-fast: false
       matrix:
